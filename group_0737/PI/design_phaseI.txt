@@ -1,0 +1,24 @@
+Data Structures
+- Time is stored as an integer (hours, minutes, seconds). Uses java.util.Date Class to store the data.
+- Patient Data is stored using a hash map. By using a hash map the nurses can look up a patients record accordingly using the right key (HC #). The value (patient record object) associated with the key is stored as a LinkedHashSet so that the order is preserved.
+Patient Record Class
+- Strings are used for variables, (Name, Birthdate)
+- Integer are used to store Health Card #
+- LinkedHashSet<HashMap<Object Date, Double> are used to store vital signs -- temperature, blood pressure, heart rate). It is a set of HashMaps with the Time as keys and the values as the values for temperature, blood pressure, and heart rate. 
+- LinkedHashSet<HashMap<Object Date, String> are used to store symptoms. It is a set of HashMaps with the keys as the Time and values as the text description for each symptom
+Hospital Class
+- Collection of patient records is stored using a HashMap. By using a HashMap, the nurses can look up a patient’s record accordingly using the right key (Health Card Number). The values associated with the key are the individual Patient Records.
+- Each policy is stored as a constant. Urgent age, minimum heart rate, maximum heart rate,  systolic blood pressure, and diastolic blood pressure are stored as an integer, and urgent temperature is stored as a double. 
+Triage Class
+- Patient Condition stored as a string that states if patient is improving or worsening.
+- Lists of patients is stored as an ArrayList<Integer>. The list of patients is an ArrayList of Health Card Numbers.
+
+
+File Format of Patient Record
+At the beginning of the file there Header with title Patient Data
+The following line has the name of the patient name, birth date and health card number.
+Then the following line has the arrival time to the hospital and time seen by doctor.
+The next line has a section for vital signs of the patient(i.e. temperature, blood pressure and heart rate).
+The next line has a list of symptoms the patient has, with a line break before and after the symptoms.
+At the end of the file is the patient’s urgency number.
+The name of the file will be the health card number of the patient.
